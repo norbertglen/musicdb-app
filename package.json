@@ -9,15 +9,24 @@
     "node": "16.13.1"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest --testTimeout=10000",
+    "test": "jest",
     "start": "node server/index.js",
     "build": "cd client && npm install && npm run build",
     "dev": "nodemon server/index.js"
   },
   "jest": {
-    "testEnvironment": "node",
+    "verbose": true,
     "coveragePathIgnorePatterns": [
       "/node_modules/"
+    ],
+    "projects": [
+      {
+        "displayName": "backend",
+        "testEnvironment": "node",
+        "testMatch": [
+          "<rootDir>/server/**/__tests__/*.js"
+        ]
+      }
     ]
   },
   "dependencies": {
