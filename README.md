@@ -18,12 +18,23 @@ Api documentation available [here](https://documenter.getpostman.com/view/684297
  Installation
 --------------
 Open your terminal and run the following commands to run the app locally
+
 `> clone repo`
+
 `> cd /path/to/cloned/repo`
+
 `> yarn install`
+
 `> yarn start`
+
 `> cd client`
+
 `> yarn install && yarn start`
+
+Testing:
+
+`> yarn test`
+
 
 The react app should start in port localhost:3000 with the server app at localhost:3001
 
