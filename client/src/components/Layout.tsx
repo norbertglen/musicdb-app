@@ -21,7 +21,7 @@ const Layout = () => {
 
   const onSearch = useCallback(
     (searchTerm: string) => {
-      console.log('Searching...', searchTerm);
+      console.log("Searching...", searchTerm);
       if (searchTerm) {
         dispatch(setIsLoading(true));
         search({ q: searchTerm }).then((res) => {
@@ -43,7 +43,18 @@ const Layout = () => {
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
-            <Box onClick={() => navigate("/")}>Logo</Box>
+            <Box color={"teal"} onClick={() => navigate("/")}>
+              <Link
+                px={2}
+                py={1}
+                rounded={"md"}
+                _hover={{
+                  textDecoration: "none",
+                }}
+              >
+                MusicDb
+              </Link>
+            </Box>
             <SearchBox onSearch={onSearch} />
           </HStack>
           <Flex alignItems={"center"}>
